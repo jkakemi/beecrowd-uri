@@ -11,7 +11,7 @@ int main() {
     while(cases--){
         cin >> n;
         int cont=0;
-        cout << "RAIZ QUADRADA" << sqrt(n) << endl;
+        //cout << "RAIZ QUADRADA" << sqrt(n) << endl;
         for(int i=2;  i<=sqrt(n); i++){
             cout << "N ATUAL " << n << endl;
             if(n%i==0){
