@@ -6,7 +6,9 @@
         "chrono": "cpp",
         "random": "cpp",
         "limits": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "iosfwd": "cpp"
     },
-    "discord.lowerDetailsEditing": "Workspace: {workspace}"
+    "discord.lowerDetailsEditing": "Workspace: {workspace}",
+    "C_Cpp.errorSquiggles": "disabled"
 }
