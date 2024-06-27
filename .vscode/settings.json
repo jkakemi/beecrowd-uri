@@ -8,7 +8,8 @@
         "limits": "cpp",
         "valarray": "cpp",
         "iosfwd": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "numeric": "cpp"
     },
     "discord.lowerDetailsEditing": "Workspace: {workspace}",
     "C_Cpp.errorSquiggles": "disabled"
