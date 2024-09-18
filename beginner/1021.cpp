@@ -2,33 +2,30 @@
 
 using namespace std;
 
-int main() {
-    double valor;
-    int notas, moedas;
-    int notasv[6] = {100, 50, 20, 10, 5, 2};
-    int moedasv[6] = {100, 50, 25, 10, 5, 1};
+int main(){
 
-    cin >> valor;
+    int nota, moeda;
+    int conjM[] = {50, 25, 10, 5, 1};
+    int conjN[] = {100, 50, 20, 10, 5, 2};
 
-    cout << "NOTAS:" << endl;
+    scanf("%d.%d", &nota, &moeda);
 
-    for (int i = 0; i < 6; i++) {
-        notas = valor / notasv[i];
-        valor -= notas * notasv[i];
-        cout << notas << " nota(s) de R$ " << notasv[i] << ".00" << endl;
+    int qtd;
+    cout << "NOTAS:\n"; 
+    for(int i=0; i<6; i++){
+        qtd = nota/conjN[i];
+        nota = nota%conjN[i];
+        cout << qtd << " nota(s) de R$ " << conjN[i] << ".00" << endl;
     }
 
-    cout << "MOEDAS:" << endl;
-
-    valor *= 100;
-    for (int i = 0; i < 6; i++) {
-        moedas = valor / moedasv[i];
-        valor -= moedas * moedasv[i];
-        if (moedasv[i] == 100)
-            cout << moedas << " moeda(s) de R$ 1.00" << endl;
-        else
-            cout << moedas << " moeda(s) de R$ " << fixed << setprecision(2) << (float)moedasv[i]/100.00 << endl;
-    }
+    cout << "MOEDAS:\n";
+    cout << nota << " moeda(s) de R$ 1.00" << endl;
+    
+    for(int i=0; i<5; i++){
+        qtd = moeda/conjM[i];
+        moeda = moeda%conjM[i];
+        cout << qtd << " moeda(s) de R$ " << fixed << setprecision(2) << (double)conjM[i]/100 << endl;
+    }   
 
     return 0;
 }
