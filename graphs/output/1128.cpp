@@ -52,16 +52,16 @@ int main()
     int numInterseccao, numRuas, tipoRua;
 
     cin >> numInterseccao >> numRuas;
-    vector<vector<int>> adjList(numInterseccao + 1);  // +1 para ajustar ao índice 1-based
+    vector<vector<int>> adjList(numInterseccao + 1);
     int v, w;
 
-    for (int i = 0; i < numRuas; i++)  // corrigido para numRuas em vez de numInterseccao
+    for (int i = 0; i < numRuas; i++)
     {
         cin >> v >> w >> tipoRua;
         addEdge(adjList, v, w, tipoRua);
     }
 
-    for(int i = 1; i <= numInterseccao; i++){  // 1-based index, iniciando em 1
+    for(int i = 1; i <= numInterseccao; i++){
         for(int j = 1; j <= numInterseccao; j++){
             if(i != j){
                 if(irEvir(adjList, i, j)){
