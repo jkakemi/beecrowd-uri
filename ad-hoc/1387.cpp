@@ -12,7 +12,7 @@ int main() {
 
         int x = l + r;
 
-        cout << x << endl;
+        cout << x << endl;n
     }
     return 0;
 }
